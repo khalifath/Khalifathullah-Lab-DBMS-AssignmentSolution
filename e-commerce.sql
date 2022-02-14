@@ -160,6 +160,8 @@ select cus_name,cus_gender from Customer where cus_name like "%A" or cus_name li
 9)	Create a stored procedure to display the Rating for a Supplier if any along with the Verdict on that rating if any like if 
 rating >4 then “Genuine Supplier” if rating >2 “Average Supplier” else “Supplier should not be considered”.
 */
+
+drop procedure if exists displayRatingMessage;
 DELIMITER $$
 create procedure displayRatingMessage(sup_id INT)
 begin
